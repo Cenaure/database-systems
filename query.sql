@@ -103,3 +103,25 @@ WHERE h.temperature > 20;
 SELECT * FROM weather_forecast_daily
   WHERE humidity_percent<50;
 
+SELECT 
+  cities.city_name,
+  calendar_date,
+  weather_types.description AS weather,
+  ROUND((min_temperature+max_temperature)/2,1) AS average_temperarure,
+  humidity_percent
+FROM weather_forecast_daily
+JOIN cities ON weather_forecast_daily.city_id = cities.id
+JOIN weather_types ON weather_forecast_daily.weather = weather_types.id;
+
+SELECT 
+  cities.city_name,
+  start_time::date AS date,
+  CONCAT(start_time::time, ' - ', end_time::time) AS time,
+  weather_types.description AS weather,
+  temperature,
+  humidity_percent,
+  CONCAT(wind_speed, ' km/h') AS wind_speed,
+  wind_direction
+FROM weather_forecast_hourly
+JOIN cities ON weather_forecast_hourly.city_id = cities.id
+JOIN weather_types ON weather_forecast_hourly.weather = weather_types.id;
