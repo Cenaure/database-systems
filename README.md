@@ -40,3 +40,31 @@ erDiagram
     weather_types ||--o{ weather_forecast_daily : "describes"
     weather_types ||--o{ weather_forecast_hourly : "describes"
 ```
+
+## Úlohy
+
+### 1. Slnečné mestá
+Vypíšte všetky mestá, ktoré majú v denných predpovediach **slnečné počasie**.
+
+**Zobrazte:**
+- názov mesta
+- typ počasia
+- dátum
+
+2. Vypíšte hodinové predpovede v čase od 14:00 do 19:00.
+   Zobrazte názov mesta, dátum, časový interval, počasie, teplotu,
+   vlhkosť a rýchlosť vetra (v km/h). Výsledky zoraďte podľa času začiatku.
+
+### 2. Hodinové predpovede popoludní
+Vypíšte hodinové predpovede v čase **od 14:00 do 19:00**.
+
+**Zobrazte:**
+- názov mesta
+- dátum
+- časový interval
+- počasie
+- teplotu
+- vlhkosť
+- rýchlosť vetra (v km/h)
+
+**Zoradenie:** podľa času začiatku.
