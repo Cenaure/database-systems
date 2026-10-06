@@ -68,3 +68,36 @@ Vypíšte hodinové predpovede v čase **od 14:00 do 19:00**.
 - rýchlosť vetra (v km/h)
 
 **Zoradenie:** podľa času začiatku.
+
+### 3. Priemerná teplota
+Vypíšte priemernú teplotu pre jednotlivé mestá. 
+
+**Zobrazte:**
+- mesto
+- dátum
+- počasie
+- priemernú
+- teplotu 
+- vlhkosť
+
+**Zoradenie:** podľa priemernej teploty zostupne.
+
+### 4. Hodinové predpovede vyššie ako 20 °C
+Vypíšte hodinové predpovede, pri ktorých je teplota vyššia ako 20 °C.
+
+**Zobrazte:**
+- mesto
+- dátum
+- počasie
+- teplotu
+
+**Zoradenie:** podľa teploty zostupne.
+
+### 5. Slnečné počasie
+Vypíšte všetky mestá, ktoré majú v denných predpovediach slnečné počasie.
+**Zobrazte:**
+- názov mesta
+- typ počasia 
+- dátum
+
+**Zoradenie:** podľa názvu mesta.
