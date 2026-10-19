@@ -74,3 +74,4 @@ FROM weather_forecast_hourly h
 WHERE h.wind_speed >= 15
   AND h.end_time > h.start_time
 ORDER BY h.wind_speed DESC, h.start_time ASC;
+
