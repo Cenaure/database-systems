@@ -2,6 +2,7 @@ DROP TABLE IF EXISTS weather_forecast_hourly CASCADE;
 DROP TABLE IF EXISTS weather_forecast_daily CASCADE;
 DROP TABLE IF EXISTS weather_types CASCADE;
 DROP TABLE IF EXISTS cities CASCADE;
+DROP TABLE IF EXISTS weather_stations CASCADE;
 
 DROP TYPE IF EXISTS wind_direction_type CASCADE;
 
@@ -55,3 +56,14 @@ CREATE TABLE IF NOT EXISTS weather_forecast_hourly
     wind_speed       SMALLINT,
     wind_direction   wind_direction_type
 );
+
+CREATE TABLE IF NOT EXISTS weather_stations
+(
+    id           SERIAL PRIMARY KEY,
+    station_name VARCHAR(75) NOT NULL,
+    city_id      INT,                       
+    FOREIGN KEY (city_id) REFERENCES cities (id),
+    altitude_m   SMALLINT
+);
+
+SELECT * FROM cities;
