@@ -15,6 +15,13 @@ erDiagram
         varchar description "NOT NULL"
     }
 
+    weather_stations {
+        serial id PK
+        varchar station_name "NOT NULL"
+        int city_id FK
+        smallint altitude_m
+    }
+
     weather_forecast_daily {
         int city_id PK, FK
         date calendar_date PK
@@ -35,6 +42,7 @@ erDiagram
         wind_direction_type wind_direction
     }
 
+    cities ||--o{ weather_stations : "has"
     cities ||--o{ weather_forecast_daily : "has"
     cities ||--o{ weather_forecast_hourly : "has"
     weather_types ||--o{ weather_forecast_daily : "describes"
